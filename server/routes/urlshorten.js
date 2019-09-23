@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const validUrl = require("valid-url");
+const constants = require('../config/constants');
 const UrlShorten = mongoose.model("UrlShorten");
-const shortid = require("shortid");
-const errorUrl='http://localhost/error';
+// const shortid = require("shortid");
 module.exports = app => {
   app.get("/api/item/:code", async (req, res) => {
     const urlCode = req.params.code;
@@ -10,7 +10,7 @@ module.exports = app => {
     if (item) {
       return res.redirect(item.originalUrl);
     } else {
-      return res.redirect(errorUrl);
+      return res.redirect(constants.errorUrl);
     }
   });
   app.post("/api/item", async (req, res) => {
