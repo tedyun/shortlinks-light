@@ -3,15 +3,15 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const mongoURI = "mongodb://localhost/url-shortner";
 const connectOptions = {
- keepAlive: true,
- reconnectTries: Number.MAX_VALUE
+  keepAlive: true,
+  reconnectTries: Number.MAX_VALUE,
+  useMongoClient: true,
 };
 //Connect to MongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect(mongoURI, connectOptions, (err, db) => {
-if (err) console.log(`Error`, err); 
- console.log(`Connected to MongoDB`);
-});
+mongoose.set('debug', true);
+mongoose.connect(mongoURI, connectOptions);
+
 const app = express();
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
