@@ -5,7 +5,7 @@ const mongoURI = "mongodb://localhost/url-shortner";
 const connectOptions = {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE,
-  useMongoClient: true,
+  useNewUrlParser: true,
 };
 //Connect to MongoDB
 mongoose.Promise = global.Promise;
@@ -31,5 +31,5 @@ require("./models/UrlShorten");
 require("./routes/urlshorten")(app);
 const PORT = 7000;
 app.listen(PORT, () => {
- console.log(`Server started on port`, PORT);
+  console.log(`Server started on port`, PORT);
 });
