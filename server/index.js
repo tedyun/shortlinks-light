@@ -9,7 +9,7 @@ const connectOptions = {
 //Connect to MongoDB
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoURI, connectOptions, (err, db) => {
-if (err) console.log(`Error`, er); 
+if (err) console.log(`Error`, err); 
  console.log(`Connected to MongoDB`);
 });
 const app = express();
