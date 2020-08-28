@@ -28,7 +28,9 @@ $ npm install
 $ npm start
 ```
 
-Now, we must set up a web server, for example Nginx. If you don't have Nginx you can install it with `sudo apt install nginx`.
+You can test if the server works by accessing http://localhost:7000/api/item/gl (it should redirect to google.com) locally.
+
+The final step is setting up a web server, for example Nginx, to redirect payload. If you don't have Nginx you can install it with `sudo apt install nginx`.
 
 Open `/etc/nginx/sites-enabled/default` with a text editor and add the following lines
 in the default server configuration (replace `yourdomain.com` with your own domain):
