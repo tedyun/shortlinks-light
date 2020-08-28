@@ -3,6 +3,13 @@ URL Shortener partially based on https://codeburst.io/creating-custom-url-shorte
 
 # Installation
 
+First install Node.js and NPM following the instruction [here](https://github.com/nodesource/distributions/blob/master/README.md).
+For example, you can run the following commands in Ubuntu/Debian for installing Node.js v12.x:
+```
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+```
+
 Install nodemon:
 ```
 $ sudo npm install -g nodemon
@@ -21,7 +28,7 @@ $ npm install
 $ npm start
 ```
 
-Now, we must set up a web server, for example Nginx. 
+Now, we must set up a web server, for example Nginx. If you don't have Nginx you can install it with `sudo apt install nginx`.
 
 Open `/etc/nginx/sites-enabled/default` with a text editor and add the following lines
 in the default server configuration (replace `yourdomain.com` with your own domain):
