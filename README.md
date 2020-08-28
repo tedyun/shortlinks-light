@@ -1,6 +1,3 @@
-# url-shortener
-URL Shortener partially based on https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7
-
 # Installation
 
 First install Node.js and NPM following the instruction [here](https://github.com/nodesource/distributions/blob/master/README.md).
@@ -36,8 +33,12 @@ Open `/etc/nginx/sites-enabled/default` with a text editor and add the following
 in the default server configuration (replace `yourdomain.com` with your own domain):
 ```
 location ~* "^/[0-9a-z@]*$"  {
-        rewrite ^/(.*)$ http://yourdomain.com:7000/api/item/$1 redirect;
+    rewrite ^/(.*)$ http://yourdomain.com:7000/api/item/$1 redirect;
 }
 ```
 
 Now, try http://yourdomain.com/gl and see if that redirects you to google.com.
+
+# Notes
+
+You can read more about the history of Go Links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3). This code in this repo is partially based on https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7
