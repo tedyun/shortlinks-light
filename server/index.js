@@ -1,16 +1,5 @@
 const express = require("express");
-// const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-// const constants = require('./config/constants');
-// const connectOptions = {
-//   keepAlive: true,
-//   reconnectTries: Number.MAX_VALUE,
-//   useNewUrlParser: true,
-// };
-//Connect to MongoDB
-// mongoose.Promise = global.Promise;
-// mongoose.set('debug', true);
-// mongoose.connect(constants.mongoURI, connectOptions);
 
 const app = express();
 app.use(function(req, res, next) {
@@ -27,7 +16,6 @@ app.use(function(req, res, next) {
   }
 });
 app.use(bodyParser.json());
-// require("./models/UrlShorten");
 require("./routes/urlshorten")(app);
 const PORT = 7000;
 app.listen(PORT, () => {

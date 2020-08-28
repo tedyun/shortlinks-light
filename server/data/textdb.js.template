@@ -1,0 +1,3 @@
+module.exports = {
+    gl: "https://www.google.com",
+};
