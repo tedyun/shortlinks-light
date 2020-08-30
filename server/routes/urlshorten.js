@@ -1,4 +1,3 @@
-const constants = require('../config/constants');
 const textdb = require('../data/textdb');
 module.exports = app => {
   app.get("/api/item/:code", async (req, res) => {
@@ -7,7 +6,7 @@ module.exports = app => {
     if (item) {
       return res.redirect(item);
     } else {
-      return res.redirect(constants.errorUrl);
+      return res.send('Cannot find link: ' + urlCode)
     }
   });
 };
