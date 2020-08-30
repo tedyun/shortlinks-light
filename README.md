@@ -39,6 +39,8 @@ location ~* "^/[0-9a-z@]*$"  {
 
 Now, try http://yourdomain.com/gl and see if that redirects you to google.com.
 
+Note that if your server is in a remote machine and if you started the server in SSH, closing the SSH session will terminate the server. I recommend running the server in a `tmux` session to keep it running (alternatively you can use `nohup`).
+
 # Notes
 
 You can read more about the history of Go Links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3). The code in this repo is partially based on https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7
