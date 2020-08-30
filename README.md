@@ -1,3 +1,9 @@
+# Overview
+
+This is a lightweight Node.js server for resolving pre-defined short links (also known as "go links"). You can read more about the history of go links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3).
+
+One can add/remove/modify links by simply editing a JSON file in SSH, which should be good enough for personal use. You can optionally implement a front-end and an actual DB backend for a more sophisticated setup.
+
 # Installation
 
 First install Node.js and NPM following the instruction [here](https://github.com/nodesource/distributions/blob/master/README.md).
@@ -39,6 +45,8 @@ location ~* "^/[0-9a-z@]*$"  {
 
 Now, try http://yourdomain.com/gl and see if that redirects you to google.com.
 
-# Notes
+Note that if your server is in a remote machine and if you started the server in SSH, closing the SSH session will terminate the server. I recommend running the server in a `tmux` session to keep it running (alternatively you can use `nohup`).
 
-You can read more about the history of Go Links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3). The code in this repo is partially based on https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7
+# Acknowledgement
+
+The code in this repo was partially inspired by https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7.
