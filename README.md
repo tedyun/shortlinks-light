@@ -1,7 +1,7 @@
 # Installation
 
 First install Node.js and NPM following the instruction [here](https://github.com/nodesource/distributions/blob/master/README.md).
-For example, you can run the following commands in Ubuntu/Debian for installing Node.js v12.x:
+For example, you can run the following commands in Ubuntu/Debian to install Node.js v12.x:
 ```
 $ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
@@ -41,4 +41,4 @@ Now, try http://yourdomain.com/gl and see if that redirects you to google.com.
 
 # Notes
 
-You can read more about the history of Go Links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3). This code in this repo is partially based on https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7
+You can read more about the history of Go Links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3). The code in this repo is partially based on https://codeburst.io/creating-custom-url-shortener-with-nodejs-de10bbbb89c7
