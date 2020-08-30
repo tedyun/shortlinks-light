@@ -1,2 +1,2 @@
-/server/node_modules
-/data/textdb.js
+server/node_modules
+server/data/textdb.js
