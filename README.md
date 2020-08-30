@@ -14,7 +14,7 @@ $ sudo npm install -g nodemon
 
 Copy template DB and add links to the text DB using a text editor:
 ```
-$ cp server/data/textdb.js.template server/data/textdb.js
+$ cp server/data/textdb.template.js server/data/textdb.js
 $ nano server/data/textdb.js
 ```
 
