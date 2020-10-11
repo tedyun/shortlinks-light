@@ -36,14 +36,15 @@ You can test if the server works by accessing http://localhost:7000/api/item/gl 
 The final step is setting up a web server, for example Nginx, to redirect payload. If you don't have Nginx you can install it with `sudo apt install nginx`.
 
 Open `/etc/nginx/sites-enabled/default` with a text editor and add the following lines
-in the default server configuration (replace `yourdomain.com` with your own domain):
+in the default server configuration (replace `yourdomain.com` with your own domain),
+right after the `server_name _;` line for example:
 ```
 location ~* "^/[0-9a-z@]*$"  {
     rewrite ^/(.*)$ http://yourdomain.com:7000/api/item/$1 redirect;
 }
 ```
 
-Now, try http://yourdomain.com/gl and see if that redirects you to google.com.
+Now, restart Nginx with `sudo service nginx restart` and try http://yourdomain.com/gl and see if that redirects you to google.com.
 
 Note that if your server is in a remote machine and if you started the server in SSH, closing the SSH session will terminate the server. I recommend running the server in a `tmux` session to keep it running (alternatively you can use `nohup`).
 
