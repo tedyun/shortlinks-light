@@ -1,8 +1,12 @@
 # Overview
 
-This is a lightweight Node.js server for resolving pre-defined short links (also known as "go links"). You can read more about the history of go links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3).
+This is a lightweight Node.js server for resolving pre-defined short links (also known as "go links"). For example, this server can redirect the URL `http://yourdomain.com/gl` to `https://google.com`, where one can choose the keyword ("`gl`") that is easy to remember, instead of using a random string as in other "URL shortener" services. You can read more about the history of go links [here](https://medium.com/@golinks/the-full-history-of-go-links-and-the-golink-system-cbc6d2c8bb3).
 
-One can add/remove/modify links by simply editing a JSON file in SSH, which should be good enough for personal use. You can optionally implement a front-end and an actual DB backend for a more sophisticated setup.
+One can add/remove/modify links by simply editing a JSON file in SSH, which should be good enough for personal use. One can optionally implement a front-end and an actual DB backend for a more sophisticated setup.
+
+# Prerequisite
+
+You need to have a domain name (preferably a short one) and a virtual/physical machine that can be used as a web server.
 
 # Installation
 
