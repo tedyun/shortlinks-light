@@ -1,2 +1,3 @@
 server/node_modules
-server/data/textdb.js
+server/data/db.csv
+sheet_id.txt
