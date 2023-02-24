@@ -22,11 +22,10 @@ Install nodemon:
 $ sudo npm install -g nodemon
 ```
 
-Copy template DB and add links to the text DB using a text editor:
-```
-$ cp server/data/textdb.template.js server/data/textdb.js
-$ nano server/data/textdb.js
-```
+Create a Google Sheet with two columns. The first column should have the URL key and the second column should have the URL.
+Make the Google Sheet publicly accessible and save the key ID in `sheet_id.txt` file. The sheet ID can be found in the URL: `docs.google.com/spreadsheets/d/{sheet_id}/edit`
+
+Now run `run_server.sh`. This will download the Sheet as a CSV file in `server/data/db.csv`. Ignore the error message from `npm start`.
 
 Install packages and run server:
 ```
