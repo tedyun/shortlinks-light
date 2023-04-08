@@ -14,7 +14,12 @@ module.exports = app => {
     const urlCode = req.params.code;
     const item = textdb[urlCode];
     if (item) {
-      return res.redirect(item);
+      if (item.startsWith('http://') || item.startsWith('https://')) {
+        return res.redirect(item);
+      }
+      else {
+        return res.send(item);
+      }
     } else {
       return res.send('Cannot find link: ' + urlCode)
     }
