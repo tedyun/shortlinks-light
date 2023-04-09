@@ -18,7 +18,10 @@ module.exports = app => {
         return res.redirect(item);
       }
       else {
-        return res.send(item);
+        return res.send(
+            '<html><head></head><body><p><strong>' +
+            item +
+            '</strong></p></body></html>');
       }
     } else {
       return res.send('Cannot find link: ' + urlCode)
