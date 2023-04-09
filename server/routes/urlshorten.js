@@ -19,9 +19,9 @@ module.exports = app => {
       }
       else {
         return res.send(
-            '<html><head></head><body><p><strong>' +
+            '<html><head></head><body><h2>' +
             item +
-            '</strong></p></body></html>');
+            '</h2></body></html>');
       }
     } else {
       return res.send('Cannot find link: ' + urlCode)
