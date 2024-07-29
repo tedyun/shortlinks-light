@@ -11,9 +11,9 @@ You need to have a domain name (preferably a short one) and a virtual/physical m
 # Installation
 
 First install Node.js and NPM following the instruction [here](https://github.com/nodesource/distributions/blob/master/README.md).
-For example, you can run the following commands in Ubuntu/Debian to install Node.js v12.x:
+For example, you can run the following commands in Ubuntu/Debian to install Node.js v22.x:
 ```
-$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+$ curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
