@@ -42,7 +42,7 @@ Open `/etc/nginx/sites-enabled/default` with a text editor and add the following
 in the default server configuration (replace `yourdomain.com` with your own domain),
 right after the `server_name _;` line for example:
 ```
-location ~* "^/[0-9a-z@]*$"  {
+location ~* "^/[0-9a-z@\-\_]*$"  {
     rewrite ^/(.*)$ http://yourdomain.com:7000/api/item/$1 redirect;
 }
 ```
